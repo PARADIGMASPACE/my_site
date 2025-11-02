@@ -1,11 +1,14 @@
+BACKEND_DIR=backend
+
 run:
-	poetry run uvicorn app.main:app --reload
+	cd $(BACKEND_DIR) && poetry run uvicorn app.main:app --reload
 
 lint:
-	poetry run ruff check .
+	cd $(BACKEND_DIR) && poetry run ruff check .
 
 format:
-	poetry run ruff format .
+	cd $(BACKEND_DIR) && poetry run ruff format .
+
 up:
 	docker-compose up --build
 
@@ -13,5 +16,4 @@ down:
 	docker-compose down -v
 
 test:
-	poetry run pytest -v
-
+	cd $(BACKEND_DIR) && poetry run pytest -v
