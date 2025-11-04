@@ -1,11 +1,16 @@
+import os
+
 from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "My Site"
+    PROJECT_NAME: str = os.getenv("PROJECT_NAME")
     BACKEND_CORS_ORIGINS: list[str] = ["*"]
-    DEBUG: bool = True
-    HOST: str = "0.0.0.0"
-    PORT: int = 8000
+    DEBUG: bool = os.getenv("DEBUG")
+    HOST: str = os.getenv("HOST")
+    PORT: int = os.getenv("PORT")
 
     class Config:
         env_file = ".env"
