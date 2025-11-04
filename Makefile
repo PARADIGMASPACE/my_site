@@ -17,3 +17,6 @@ down:
 
 test:
 	cd $(BACKEND_DIR) && poetry run pytest -v
+
+requirements:
+	cd $(BACKEND_DIR) && poetry export -f requirements.txt --output requirements.txt --without-hashes
