@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: monospace;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5.5em;
+    margin-bottom: 0.2em;
+}
+
+p {
+    font-size: 2em;
+    margin: 0.3em 0;
+}
+
+.links {
+    margin-top: 1em;
+}
+
+.links a {
+    color: #9cd3ff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 3em;
+}
+
+.links a:hover {
+    color: #ffffff;
+}

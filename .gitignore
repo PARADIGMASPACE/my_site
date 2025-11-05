@@ -3,7 +3,7 @@ __pycache__/
 *$py.class
 
 *.so
-
+frontend/static
 .Python
 build/
 develop-eggs/
