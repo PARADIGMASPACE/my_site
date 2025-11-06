@@ -1,7 +1,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+ssl/
+*.pem
+*.key
 *.so
 frontend/static
 .Python
