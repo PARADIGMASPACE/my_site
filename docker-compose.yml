@@ -4,6 +4,14 @@ services:
   backend:
     build: ./backend
     container_name: backend
-    ports:
-      - "8000:8000"
     restart: unless-stopped
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

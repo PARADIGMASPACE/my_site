@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Settings(BaseSettings):
     PROJECT_NAME: str = os.getenv("PROJECT_NAME")
     BACKEND_CORS_ORIGINS: list[str] = ["*"]
@@ -15,5 +16,6 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+
 
 settings = Settings()
