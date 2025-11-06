@@ -16,7 +16,7 @@ down:
 	docker-compose down -v
 
 test:
-	 cd $(BACKEND_DIR) && PYTHONPATH=.. poetry run pytest -v ../tests
+	cd backend && PYTHONPATH=.:.. poetry run pytest -v ../tests
 
 requirements:
 	cd $(BACKEND_DIR) && poetry export -f requirements.txt --output requirements.txt --without-hashes
